@@ -3,6 +3,29 @@
   <head>
     <title> WEB1 - Home Page</title>
     <meta charset = "utf-8">
+    <script>
+      function changeColor(self)
+      {
+        var aList = document.querySelectorAll('a');
+
+        for(let i=0; i<aList.length; i++)
+        {
+          aList[i].style.background=self.value;
+        }
+
+        var target = document.querySelector('#first');
+        if(self.value === 'green')
+        {
+          target.style.color='green';
+          self.value='red';
+        }
+        else
+        {
+          target.style.color='red';
+          self.value='green';
+        }
+      }
+    </script>
     <style>
     </style>
   </head>
@@ -15,20 +38,7 @@
       <li><a href = "4.html">JavaScript</a></li>
     </ol>
     <h2 style="background-color:coral;color:powderblue">Web</h2>
-    <input id="coloring" type="button" value="green" onclick=
-    "
-      var target = document.querySelector('#first');
-      if(this.value === 'green')
-      {
-        target.style.color='green';
-        this.value='red';
-      }
-      else
-      {
-        target.style.color='red';
-        this.value='green';
-      }
-    ">
+    <input id="coloring" type="button" value="green" onclick="changeColor(this);">
     <p style = "margin-top:40px"><span id="first" class="js">Home</span> Page</p>
     <p>
       <iframe width="560" height="315"
@@ -38,20 +48,7 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
     </p>
-    <input id="coloring" type="button" value="green" onclick=
-    "
-      var target = document.querySelector('#first');
-      if(this.value === 'green')
-      {
-        target.style.color='green';
-        this.value='red';
-      }
-      else
-      {
-        target.style.color='red';
-        this.value='green';
-      }
-    ">
+    <input id="coloring" type="button" value="green" onclick="changeColor(this);">
     <img src = "coin.jpg" width = "100%">
   </body>
 </html>
