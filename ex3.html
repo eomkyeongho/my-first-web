@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <script>
+    var obj =
+    {
+      "one":"first",
+      "two":"second",
+      myFunc:function()
+      {
+        this.two="changed!";
+      }
+    };
+
+    obj["three"] = "third";
+    obj.four = "fourth";
+
+    obj.myFunc();
+
+    for(let key in obj)
+    {
+      document.write(obj[key]+'<br>');
+    }
+  </script>
+  </body>
+</html>

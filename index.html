@@ -3,29 +3,8 @@
   <head>
     <title> WEB1 - Home Page</title>
     <meta charset = "utf-8">
-    <script>
-      function changeColor(self)
-      {
-        var aList = document.querySelectorAll('a');
-
-        for(let i=0; i<aList.length; i++)
-        {
-          aList[i].style.background=self.value;
-        }
-
-        var target = document.querySelector('#first');
-        if(self.value === 'green')
-        {
-          target.style.color='green';
-          self.value='red';
-        }
-        else
-        {
-          target.style.color='red';
-          self.value='green';
-        }
-      }
-    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+    <script src="colors.js"></script>
     <style>
     </style>
   </head>
