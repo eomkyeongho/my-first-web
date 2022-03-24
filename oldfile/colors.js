@@ -24,6 +24,7 @@ var Links =
 function changeColor(self)
 {
   Links.setColor(self.value);
+  console.log("ok");
 
   if(self.value === 'green')
   {
